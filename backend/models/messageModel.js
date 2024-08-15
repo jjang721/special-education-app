@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const messageModel = model.Schema({
+const messageModel = mongoose.Schema({
     sender: {type:mongoose.Schema.Types.ObjectId, ref: "User"},
     content: {type: String, trim:true},
     chat: {type:mongoose.Schema.Types.ObjectId, ref: "Chat"}
@@ -9,6 +9,8 @@ const messageModel = model.Schema({
 }
 
 );
+
+
 
 const Message = mongoose.model("Message", messageModel)
 
